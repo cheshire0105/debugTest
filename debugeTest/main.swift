@@ -40,17 +40,13 @@ print("The sum of numbers from 1 to \(number) is \(result)")
 
 // MARK: - 소수 판별 함수
 func isPrime(n: Int) -> Bool {
-
-    
     if n <= 1 {
         return false
     }
-    
     if n <= 3 {
         return true
     }
     
-
     var i = 2
     while i*i <= n {
         if n % i == 0 {
@@ -67,18 +63,18 @@ print("\(numberTwo) is prime: \(resultTwo)")
 
 // MARK: 함수의 실행 순서
 /*
- 1. 입력값 확인: 함수는 먼저 입력받은 숫자 n이 1 이하인지, 또는 3 이하인지를 확인합니다. n이 1 이하인 경우, 이는 소수가 아니므로 함수는 false를 반환합니다. n이 3 이하인 경우, 이는 소수이므로 함수는 true를 반환합니다.
- 2. 소수 판별: n이 4 이상인 경우, 함수는 2부터 시작하여 i*i가 n보다 작거나 같을 때까지 모든 i에 대해 n을 i로 나누어 봅니다. 이때 n % i가 0인 경우가 있으면, n은 i와 n/i라는 두 개의 약수를 가지므로 소수가 아닙니다. 따라서 이 경우 함수는 false를 반환합니다.
- 3. 소수 확인: i*i가 n보다 커질 때까지 n을 i로 나눈 나머지가 모두 0이 아니었다면, n은 소수입니다. 따라서 함수는 true를 반환합니다.
+ 1. 함수는 먼저 입력받은 숫자 n이 1 이하인지, 또는 3 이하인지를 확인합니다.
+ 2. n이 1 이하인 경우, 이는 소수가 아니므로 함수는 false를 반환합니다.
+ 3. n이 3 이하인 경우, 이는 소수이므로 함수는 true를 반환합니다.
+ 4. n이 4 이상인 경우, 함수는 2부터 시작하여 i*i가 n보다 작거나 같을 때까지 모든 i에 대해 n을 i로 나누어 봅니다.
+ 5. 이때 n % i가 0인 경우가 있으면, n은 i와 n/i라는 두 개의 약수를 가지므로 소수가 아닙니다. 따라서 이 경우 함수는 false를 반환합니다.
+ 6. i*i가 n보다 커질 때까지 n을 i로 나눈 나머지가 모두 0이 아니었다면, n은 소수입니다. 따라서 함수는 true를 반환합니다.
  */
 
 
 // MARK: breakPoint 두개 사용 예시
 /*
- while i*i <= n {
- 
- print("\(numberTwo) is prime: \(resultTwo)")
-
- 이 두개의 줄에 breakPoint를 넣고 실행 하면 디버그 창에서 내부에서 어떻게 흘러가는지 알 수 있습니다.
-
+ 1. while i*i <= n {
+ 2. print("\(numberTwo) is prime: \(resultTwo)")
+ 3. 위의 두개의 줄에 breakPoint를 넣고 실행 하면 디버그 창에서 내부에서 어떻게 흘러가는지 알 수 있습니다.
  */
